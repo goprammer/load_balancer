@@ -1,16 +1,16 @@
 # Load Balancer
 A Go load balancer that monitors and notifies the status of endpoints through the terminal.
 
-# Start Load Balancer and Endpoints
+## Start Load Balancer and Endpoints
     source ./ENV.sh
     ./endpoints/start_endpoints.sh
     go run load_balancer.go
 
-# Stop Load Balancer and Remove Endpoints
+## Stop Load Balancer and Remove Endpoints
 	./endpoints/stop_endpoint.sh
     kill -15 $(cat pid.txt)
 
-# Behavior
+## Behavior
 All endpoints are active.
 * Load Balancer uses a round robin to route traffic evenly.
 * Prints all active status to terminal.
